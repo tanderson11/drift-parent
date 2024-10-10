@@ -5,7 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
     
-<?php wp_head(); ?>
+<?php 
+
+global $post;
+$post_ID = $post->ID;
+$ip = $_SERVER['REMOTE_ADDR'];
+$x_forwarded_for_ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+
+error_log(sprintf("Header loaded by for post id = %s", $post_ID));
+echo(sprintf("HEADER: ip address %s result is %s. X forwarded for is %s", $ip, $is_whitelisted, $x_forwarded_for_ip));
+error_log(sprintf("HEADER: ip address %s result is %s. X forwarded for is %s", $ip, $is_whitelisted, $x_forwarded_for_ip));
+
+wp_head(); ?>
 
 </head>
 
