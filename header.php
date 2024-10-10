@@ -19,8 +19,8 @@ error_log(sprintf("Header loaded by for post id = %s<br>", $post_ID));
 echo(sprintf("HEADER: REMOTE_ADDR ip address %s.<br>", $ip));
 echo(sprintf("HEADER: HTTP_CLIENT_IP ip address %s.<br>", $ip2));
 echo(sprintf("HEADER: HTTP_X_REAL_IP ip address %s.<br>", $ip3));
-echo(sprintf("HEADER: HTTP_X_FORWARDED_FOR ip address %s.<br>", $ip4));
-echo(sprintf("HEADER: HTTP_CF_CONNECTING_IP ip address %s.<br>", $ip5));
+echo(sprintf("HEADER: HTTP_X_FORWARDED_FOR ip address %s.<br>", $x_forwarded_for_ip));
+echo(sprintf("HEADER: HTTP_CF_CONNECTING_IP ip address %s.<br>", $ip4));
 
 error_log(print_r($_SERVER, 1));
 
